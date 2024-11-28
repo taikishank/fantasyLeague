@@ -19,6 +19,7 @@ def dataset():
 
     url = "https://fbref.com/en/comps/Big5/Big-5-European-Leagues-Stats"
     data = requests.get(url)
+    time.sleep(4)
     soup = BeautifulSoup(data.text, features="lxml")
     standings_table = soup.select('table.stats_table')[0]
     links = standings_table.find_all('a')
@@ -31,11 +32,22 @@ def dataset():
 #   csv file dependent upon the league
 #   ex  Barcelona is in La_Liga, Tottenham is in Premier_League, etc...
 
+    counter = 0
+
     for link in team_urls:
+        # if (link == "https://fbref.com/en/squads/206d90db/Barcelona-Stats"):
+        #     continue
         team_name = link.split("/")[-1].replace("Stats", "").replace("-", " ")
         data = requests.get(link)
-        players = pd.read_html(StringIO(data.text), match="Standard Stats")[0]
-        players.columns = players.columns.droplevel()
+
+        try:
+            players = pd.read_html(StringIO(data.text), match="Standard Stats")[0]
+            players.columns = players.columns.droplevel()
+        except ValueError:
+            print("Error trying to pass over table for " + team_name)
+            pass
+
+        
         players = players.loc[:, ~players.columns.duplicated()]
         player_data = players[['Player', 'Pos', 'Age', 'MP', 'Min', 'Gls', 'Ast', 'CrdY', 'CrdR', 'xG', 'xAG']]     #   relevant categories for data
         player_data = player_data[:-2]      #   last two rows are total team stats, not necessary for this program
@@ -50,4 +62,9 @@ def dataset():
         folder_path = r"D:\Taiki\Desktop\CS_Projects\premierLeagueWebScrape\teamDatabase"
         player_data.to_csv(folder_path + '\\' + league + '\\' + team_name, index=False)
 
-        time.sleep(3)   # sleep so fbref gods dont ban
+        print(team_name + " successfully uploaded as csv to " + league)
+        time.sleep(10)   # sleep so fbref gods dont ban
+
+        # if (counter == 4):
+        #     break
+        # counter += 1
