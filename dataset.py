@@ -51,6 +51,7 @@ def dataset():
         players = players.loc[:, ~players.columns.duplicated()]
         player_data = players[['Player', 'Pos', 'Age', 'MP', 'Min', 'Gls', 'Ast', 'CrdY', 'CrdR', 'xG', 'xAG']]     #   relevant categories for data
         player_data = player_data[:-2]      #   last two rows are total team stats, not necessary for this program
+        player_data['Club'] = team_name
 
     #   many different instances of '/en/comps/', grab the second instance as it is easiest to extract league name
     #   store datatable into csv
@@ -59,7 +60,7 @@ def dataset():
         league = soup.find_all('a', href=lambda href: href and '/en/comps/' in href)[1]
         league = league.text.replace(' ', '_')
         player_data = pd.DataFrame(data = data)
-        folder_path = r"D:\Taiki\Desktop\CS_Projects\premierLeagueWebScrape\teamDatabase"
+        folder_path = r"D:\Taiki\Desktop\CS_Projects\fantasy\teamDatabase"
         player_data.to_csv(folder_path + '\\' + league + '\\' + team_name, index=False)
 
         print(team_name + " successfully uploaded as csv to " + league)
