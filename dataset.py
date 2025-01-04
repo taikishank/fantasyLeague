@@ -46,6 +46,7 @@ def dataset():
         player_data = player_data[:-2]      #   last two rows are total team stats, not necessary for this program
         team_name = team_name[:-1]
         player_data['Club'] = team_name
+        
 
     #   many different instances of '/en/comps/', grab the second instance as it is easiest to extract league name
     #   store datatable into csv
@@ -54,9 +55,19 @@ def dataset():
         league = soup.find_all('a', href=lambda href: href and '/en/comps/' in href)[1]
         league = league.text.replace(' ', '_')
         player_data['League'] = league
-        player_data = pd.DataFrame(data = data)
-        folder_path = r"D:\Taiki\Desktop\CS_Projects\fantasy\teamDatabase"
-        player_data.to_csv(folder_path + '\\' + league + '\\' + team_name.replace(' ', "_") + '.csv', index=False)
+        folder_path = "teamDatabase"
+        
+        # Create the league directory if it doesn't exist
+        league_path = os.path.join(folder_path, league)
+        os.makedirs(league_path, exist_ok=True)  # This will create both teamDatabase and the league subdirectory
+        
+        # Now create the file path and save the CSV
+        file_path = os.path.join(folder_path, league, team_name.replace(' ', "_") + '.csv')
+        player_data.to_csv(file_path, index=False)
 
         print(team_name + " successfully uploaded as csv to " + league)
         time.sleep(10)   # sleep so fbref gods dont ban
+
+
+# Uncomment this to generate the datafiles
+dataset()

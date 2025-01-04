@@ -1,0 +1,33 @@
+Player,Pos,Age,MP,Min,Gls,Ast,CrdY,CrdR,xG,xAG,Club,League
+Marco Bizot,GK,33-299,14,1260.0,0.0,0.0,1.0,0.0,0.0,0.0,Brest,Ligue_1
+Brendan Chardonnet,DF,30-012,13,1170.0,1.0,0.0,3.0,0.0,0.5,0.3,Brest,Ligue_1
+Mahdi Camara,MF,26-187,15,1046.0,2.0,1.0,2.0,0.0,1.0,0.8,Brest,Ligue_1
+Kenny Lala,DF,33-092,12,1066.0,2.0,1.0,2.0,0.0,2.0,0.7,Brest,Ligue_1
+Hugo Magnetti,MF,26-218,14,1019.0,0.0,0.0,2.0,0.0,0.4,0.4,Brest,Ligue_1
+Ludovic Ajorque,FW,30-313,13,972.0,4.0,1.0,3.0,0.0,3.0,0.9,Brest,Ligue_1
+Julien Le Cardinal,DF,27-153,9,793.0,0.0,1.0,2.0,0.0,0.3,0.2,Brest,Ligue_1
+Romain Del Castillo,FW,28-280,13,789.0,4.0,3.0,0.0,0.0,3.7,2.3,Brest,Ligue_1
+Jordan Amavi,DF,30-300,10,746.0,0.0,0.0,2.0,0.0,0.3,0.2,Brest,Ligue_1
+Mama Samba Baldé,FW,29-058,12,611.0,2.0,1.0,1.0,0.0,1.7,1.0,Brest,Ligue_1
+Massadio Haïdara,DF,32-032,8,561.0,0.0,0.0,2.0,1.0,0.1,0.0,Brest,Ligue_1
+Mathias Pereira Lage,"FW,MF",28-034,12,510.0,1.0,2.0,2.0,0.0,0.6,1.2,Brest,Ligue_1
+Romain Faivre,"FW,MF",26-173,11,487.0,2.0,2.0,1.0,0.0,1.6,0.7,Brest,Ligue_1
+Kamory Doumbia,"MF,FW",21-320,12,557.0,1.0,1.0,0.0,0.0,0.5,0.4,Brest,Ligue_1
+Jonas Martin,MF,34-269,12,458.0,1.0,0.0,2.0,0.0,0.3,0.3,Brest,Ligue_1
+Edimilson Fernandes,MF,28-263,7,422.0,0.0,0.0,0.0,0.0,0.1,0.3,Brest,Ligue_1
+Abdoulaye Niakhate Ndiaye,DF,22-268,5,416.0,0.0,0.0,2.0,0.0,0.1,0.0,Brest,Ligue_1
+Abdallah Sima,FW,23-200,10,412.0,3.0,1.0,0.0,0.0,1.9,0.2,Brest,Ligue_1
+Pierre Lees-Melou,MF,31-223,6,350.0,0.0,0.0,2.0,0.0,0.3,0.1,Brest,Ligue_1
+Luc Zogbé,DF,19-285,7,309.0,0.0,0.0,0.0,0.0,0.1,0.1,Brest,Ligue_1
+Soumaïla Coulibaly,DF,21-081,5,321.0,0.0,0.0,0.0,0.0,0.1,0.0,Brest,Ligue_1
+Ibrahim Salah,FW,23-126,9,318.0,1.0,1.0,0.0,0.0,0.6,0.6,Brest,Ligue_1
+Jérémy Le Douaron,FW,26-257,2,102.0,0.0,0.0,0.0,0.0,0.2,0.0,Brest,Ligue_1
+Grégoire Coudert,GK,25-275,1,90.0,0.0,0.0,0.0,0.0,0.0,0.0,Brest,Ligue_1
+Axel Camblan,"MF,FW",21-126,2,26.0,0.0,0.0,0.0,0.0,0.0,0.0,Brest,Ligue_1
+Hianga Mananga Mbock,MF,25-006,1,21.0,0.0,0.0,0.0,0.0,0.0,0.0,Brest,Ligue_1
+Léo Botz,FW,19-358,0,,,,,,,,Brest,Ligue_1
+Achraf Dari,DF,25-242,0,,,,,,,,Brest,Ligue_1
+Sérigné Diop,FW,19-236,0,,,,,,,,Brest,Ligue_1
+Noah Jauny,GK,20-130,0,,,,,,,,Brest,Ligue_1
+Ibrahim Kanté,MF,17-291,0,,,,,,,,Brest,Ligue_1
+Raphael Le Guen,DF,18-124,0,,,,,,,,Brest,Ligue_1

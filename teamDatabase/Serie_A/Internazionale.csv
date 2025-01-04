@@ -1,0 +1,31 @@
+Player,Pos,Age,MP,Min,Gls,Ast,CrdY,CrdR,xG,xAG,Club,League
+Yann Sommer,GK,36-017,17,1530.0,0.0,0.0,0.0,0.0,0.0,0.0,Internazionale,Serie_A
+Henrikh Mkhitaryan,MF,35-348,17,1389.0,1.0,3.0,2.0,0.0,1.2,1.4,Internazionale,Serie_A
+Marcus Thuram,FW,27-150,17,1356.0,12.0,3.0,1.0,0.0,6.6,2.2,Internazionale,Serie_A
+Federico Dimarco,"DF,FW",27-054,16,1256.0,3.0,3.0,2.0,0.0,1.8,4.0,Internazionale,Serie_A
+Alessandro Bastoni,DF,25-265,16,1234.0,1.0,4.0,2.0,0.0,0.3,1.9,Internazionale,Serie_A
+Lautaro Martínez,FW,27-134,15,1255.0,6.0,2.0,0.0,0.0,6.5,1.4,Internazionale,Serie_A
+Nicolò Barella,MF,27-331,14,1094.0,3.0,4.0,1.0,0.0,1.3,2.2,Internazionale,Serie_A
+Hakan Çalhanoğlu,MF,30-330,13,871.0,4.0,2.0,2.0,0.0,3.6,2.5,Internazionale,Serie_A
+Matteo Darmian,DF,35-032,15,815.0,1.0,2.0,2.0,0.0,0.7,0.9,Internazionale,Serie_A
+Yann Aurel Bisseck,DF,24-035,12,771.0,1.0,1.0,3.0,0.0,1.4,0.5,Internazionale,Serie_A
+Francesco Acerbi,DF,36-328,9,670.0,0.0,1.0,0.0,0.0,0.3,0.2,Internazionale,Serie_A
+Denzel Dumfries,"DF,FW",28-260,14,840.0,3.0,1.0,3.0,0.0,2.2,1.3,Internazionale,Serie_A
+Benjamin Pavard,DF,28-281,10,763.0,0.0,1.0,3.0,0.0,0.3,0.4,Internazionale,Serie_A
+Stefan de Vrij,DF,32-333,13,804.0,1.0,0.0,0.0,0.0,0.6,0.0,Internazionale,Serie_A
+Davide Frattesi,MF,25-073,14,594.0,3.0,1.0,1.0,0.0,1.5,0.7,Internazionale,Serie_A
+Carlos Augusto,DF,25-362,10,399.0,2.0,0.0,0.0,0.0,0.7,0.1,Internazionale,Serie_A
+Piotr Zieliński,MF,30-228,12,349.0,2.0,1.0,0.0,0.0,2.1,0.4,Internazionale,Serie_A
+Kristjan Asllani,MF,22-300,9,294.0,0.0,1.0,2.0,0.0,0.4,0.8,Internazionale,Serie_A
+Mehdi Taremi,FW,32-169,12,254.0,0.0,1.0,0.0,0.0,0.9,0.5,Internazionale,Serie_A
+Joaquín Correa,"FW,MF",30-143,5,152.0,1.0,2.0,1.0,0.0,0.8,1.4,Internazionale,Serie_A
+Marko Arnautović,FW,35-259,5,71.0,0.0,0.0,1.0,0.0,0.9,0.1,Internazionale,Serie_A
+Tajon Buchanan,"DF,FW",25-330,4,58.0,0.0,0.0,0.0,0.0,0.0,0.0,Internazionale,Serie_A
+Tiago Palacios,DF,21-250,2,11.0,0.0,0.0,0.0,0.0,0.0,0.0,Internazionale,Serie_A
+Mike Aidoo,DF,19-218,0,,,,,,,,Internazionale,Serie_A
+Thomas Berenbruch,MF,19-217,0,,,,,,,,Internazionale,Serie_A
+Alessandro Calligaris,GK,19-302,0,,,,,,,,Internazionale,Serie_A
+Raffaele Di Gennaro,GK,31-092,0,,,,,,,,Internazionale,Serie_A
+Alessandro Fontanarosa,DF,21-331,0,,,,,,,,Internazionale,Serie_A
+Josep Martinez,GK,26-221,0,,,,,,,,Internazionale,Serie_A
+Matteo Motta,DF,19-328,0,,,,,,,,Internazionale,Serie_A

@@ -1,0 +1,33 @@
+Player,Pos,Age,MP,Min,Gls,Ast,CrdY,CrdR,xG,xAG,Club,League
+Obite N'Dicka,DF,25-137,18,1620.0,0.0,1.0,1.0,0.0,0.5,0.6,Roma,Serie_A
+Mile Svilar,GK,25-130,18,1620.0,0.0,0.0,1.0,0.0,0.0,0.0,Roma,Serie_A
+Angeliño,DF,28-000,18,1529.0,0.0,1.0,1.0,0.0,0.3,1.6,Roma,Serie_A
+Gianluca Mancini,DF,28-262,18,1478.0,1.0,0.0,3.0,0.0,0.7,0.8,Roma,Serie_A
+Artem Dovbyk,FW,27-197,16,1324.0,5.0,2.0,0.0,0.0,6.0,1.7,Roma,Serie_A
+Zeki Çelik,DF,27-322,17,1244.0,0.0,1.0,1.0,0.0,0.4,1.1,Roma,Serie_A
+Manu Koné,MF,23-232,16,1119.0,2.0,0.0,4.0,0.0,1.4,1.0,Roma,Serie_A
+Bryan Cristante,MF,29-307,14,999.0,1.0,0.0,4.0,0.0,0.8,0.3,Roma,Serie_A
+Paulo Dybala,"FW,MF",31-050,15,960.0,5.0,1.0,1.0,0.0,4.9,3.8,Roma,Serie_A
+Lorenzo Pellegrini,MF,28-199,14,937.0,0.0,1.0,2.0,0.0,2.1,1.6,Roma,Serie_A
+Stephan El Shaarawy,"DF,MF",32-069,14,669.0,2.0,3.0,2.0,0.0,1.7,0.8,Roma,Serie_A
+Niccolò Pisilli,MF,20-103,13,727.0,2.0,1.0,5.0,0.0,1.4,0.6,Roma,Serie_A
+Matìas Soulé,"MF,FW",21-264,11,544.0,1.0,0.0,1.0,0.0,1.3,0.9,Roma,Serie_A
+Alexis Saelemaekers,"DF,FW",25-191,7,413.0,2.0,0.0,2.0,0.0,0.8,1.2,Roma,Serie_A
+Leandro Paredes,MF,30-189,9,485.0,1.0,1.0,1.0,0.0,1.0,1.1,Roma,Serie_A
+Nicola Zalewski,"DF,FW",22-347,10,505.0,0.0,0.0,0.0,0.0,0.3,0.8,Roma,Serie_A
+Mats Hummels,DF,36-019,6,357.0,0.0,0.0,1.0,0.0,0.3,0.0,Roma,Serie_A
+Enzo Le Fée,MF,24-336,6,318.0,0.0,0.0,1.0,0.0,0.2,0.1,Roma,Serie_A
+Mario Hermoso,DF,29-200,8,251.0,0.0,0.0,2.0,1.0,0.1,0.0,Roma,Serie_A
+Tommaso Baldanzi,"MF,FW",21-287,13,390.0,1.0,1.0,1.0,0.0,1.0,0.2,Roma,Serie_A
+Saud Abdulhamid,DF,25-170,3,142.0,0.0,1.0,0.0,0.0,0.0,0.1,Roma,Serie_A
+Eldor Shomurodov,"FW,MF",29-189,8,119.0,1.0,1.0,1.0,0.0,0.7,0.1,Roma,Serie_A
+Samuel Dahl,"DF,MF",24-306,2,43.0,0.0,0.0,0.0,0.0,0.0,0.0,Roma,Serie_A
+Tammy Abraham,FW,27-094,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,Roma,Serie_A
+Edoardo Bove,MF,22-233,0,,,,,,,,Roma,Serie_A
+João Costa,FW,19-282,0,,,,,,,,Roma,Serie_A
+Giorgio De Marzi,GK,17-261,0,,,,,,,,Roma,Serie_A
+Renato Marin,GK,18-178,0,,,,,,,,Roma,Serie_A
+Federico Nardin,DF,17-321,0,,,,,,,,Roma,Serie_A
+Mathew Ryan,GK,32-271,0,,,,,,,,Roma,Serie_A
+Buba Sangaré,DF,17-151,0,,,,,,,,Roma,Serie_A
+Chris Smalling,DF,35-043,0,,,,,,,,Roma,Serie_A

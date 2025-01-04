@@ -1,0 +1,34 @@
+Player,Pos,Age,MP,Min,Gls,Ast,CrdY,CrdR,xG,xAG,Club,League
+Gerónimo Rulli,GK,32-228,15,1350.0,0.0,0.0,0.0,0.0,0.0,0.0,Marseille,Ligue_1
+Pierre Højbjerg,MF,29-151,15,1345.0,2.0,0.0,3.0,0.0,1.2,0.7,Marseille,Ligue_1
+Mason Greenwood,"FW,MF",23-094,15,1273.0,10.0,1.0,1.0,0.0,6.0,1.9,Marseille,Ligue_1
+Luis Henrique,"FW,DF",23-020,15,1131.0,6.0,4.0,0.0,0.0,2.2,1.5,Marseille,Ligue_1
+Michael Amir Murillo,DF,28-327,15,1154.0,0.0,0.0,0.0,0.0,0.2,0.5,Marseille,Ligue_1
+Geoffrey Kondogbia,"DF,MF",31-323,13,1100.0,0.0,0.0,1.0,0.0,0.2,0.1,Marseille,Ligue_1
+Leonardo Balerdi,DF,25-343,12,994.0,0.0,0.0,4.0,1.0,0.0,0.7,Marseille,Ligue_1
+Adrien Rabiot,MF,29-275,10,775.0,1.0,1.0,2.0,0.0,1.0,0.7,Marseille,Ligue_1
+Neal Maupay,FW,28-142,11,607.0,2.0,4.0,3.0,1.0,2.3,2.0,Marseille,Ligue_1
+Amine Harit,MF,27-199,9,472.0,2.0,3.0,0.0,1.0,0.7,1.3,Marseille,Ligue_1
+Lilian Brassier,DF,25-062,10,629.0,0.0,0.0,2.0,0.0,0.2,0.0,Marseille,Ligue_1
+Quentin Merlin,"DF,MF",22-232,8,556.0,1.0,1.0,1.0,0.0,0.6,0.4,Marseille,Ligue_1
+Elye Wahi,FW,22-001,12,542.0,2.0,1.0,1.0,0.0,5.2,0.4,Marseille,Ligue_1
+Derek Cornelius,DF,27-039,9,554.0,0.0,0.0,4.0,1.0,0.1,0.1,Marseille,Ligue_1
+Valentin Rongier,"MF,DF",30-027,10,484.0,1.0,0.0,3.0,0.0,0.6,0.2,Marseille,Ligue_1
+Ulisses Garcia,DF,28-358,8,394.0,1.0,1.0,1.0,0.0,0.4,0.7,Marseille,Ligue_1
+Pol Lirola,DF,27-143,8,357.0,1.0,1.0,0.0,1.0,0.5,0.2,Marseille,Ligue_1
+Jon Rowe,"FW,MF",21-248,13,385.0,2.0,2.0,2.0,0.0,1.8,2.8,Marseille,Ligue_1
+Ismaël Koné,"MF,FW",22-211,7,315.0,0.0,0.0,0.0,0.0,0.2,0.3,Marseille,Ligue_1
+Valentin Carboni,"MF,FW",19-304,4,103.0,0.0,0.0,1.0,0.0,0.0,0.1,Marseille,Ligue_1
+Bamo Meïté,"DF,MF",23-031,3,26.0,0.0,0.0,0.0,0.0,0.0,0.0,Marseille,Ligue_1
+Enzo Sternal,"FW,MF",17-220,2,24.0,0.0,0.0,1.0,0.0,0.0,0.0,Marseille,Ligue_1
+Bilal Nadir,MF,21-036,3,21.0,0.0,0.0,0.0,0.0,0.0,0.0,Marseille,Ligue_1
+Emmanuel Koum Mbondo,DF,18-333,1,12.0,0.0,0.0,0.0,0.0,0.0,0.0,Marseille,Ligue_1
+Faris Pemi Moumbagna,FW,24-186,1,8.0,0.0,0.0,0.0,0.0,0.0,0.0,Marseille,Ligue_1
+Keyliane Abdallah,FW,18-273,1,3.0,0.0,0.0,0.0,0.0,0.0,0.0,Marseille,Ligue_1
+Darryl Bakola,MF,17-034,0,,,,,,,,Marseille,Ligue_1
+Salim Ben Seghir,FW,21-314,0,,,,,,,,Marseille,Ligue_1
+Jeffrey De Lange,GK,26-277,0,,,,,,,,Marseille,Ligue_1
+Gael Lafont,FW,18-210,0,,,,,,,,Marseille,Ligue_1
+Rony Mimb Baheng,DF,19-256,0,,,,,,,,Marseille,Ligue_1
+Roggerio Nyakossi,DF,20-356,0,,,,,,,,Marseille,Ligue_1
+Jelle Van Neck,GK,20-302,0,,,,,,,,Marseille,Ligue_1

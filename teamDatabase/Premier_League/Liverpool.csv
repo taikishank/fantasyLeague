@@ -1,0 +1,30 @@
+Player,Pos,Age,MP,Min,Gls,Ast,CrdY,CrdR,xG,xAG,Club,League
+Virgil van Dijk,DF,33-179,18,1620.0,1.0,1.0,1.0,0.0,1.0,0.3,Liverpool,Premier_League
+Mohamed Salah,FW,32-202,18,1582.0,17.0,13.0,1.0,0.0,15.4,7.5,Liverpool,Premier_League
+Ryan Gravenberch,MF,22-232,18,1557.0,0.0,2.0,4.0,0.0,0.6,1.5,Liverpool,Premier_League
+Trent Alexander-Arnold,DF,26-088,17,1310.0,1.0,4.0,3.0,0.0,0.7,5.3,Liverpool,Premier_League
+Andrew Robertson,DF,30-298,17,1289.0,0.0,0.0,2.0,1.0,0.5,2.4,Liverpool,Premier_League
+Alexis Mac Allister,MF,26-010,17,1232.0,1.0,2.0,5.0,0.0,1.0,2.7,Liverpool,Premier_League
+Dominik Szoboszlai,MF,24-070,17,1132.0,2.0,2.0,5.0,0.0,4.0,2.9,Liverpool,Premier_League
+Luis Díaz,FW,27-356,17,1056.0,8.0,2.0,1.0,0.0,5.1,1.9,Liverpool,Premier_League
+Ibrahima Konaté,DF,25-223,12,974.0,1.0,1.0,4.0,0.0,0.8,0.2,Liverpool,Premier_League
+Cody Gakpo,FW,25-241,18,905.0,5.0,2.0,4.0,0.0,3.3,2.5,Liverpool,Premier_League
+Alisson,GK,32-093,10,888.0,0.0,0.0,0.0,0.0,0.0,0.6,Liverpool,Premier_League
+Curtis Jones,MF,23-339,15,809.0,3.0,2.0,1.0,0.0,2.9,0.3,Liverpool,Premier_League
+Caoimhín Kelleher,GK,26-041,8,720.0,0.0,0.0,0.0,0.0,0.0,0.0,Liverpool,Premier_League
+Darwin Núñez,FW,25-193,14,726.0,2.0,2.0,4.0,0.0,2.5,0.9,Liverpool,Premier_League
+Diogo Jota,FW,28-030,11,573.0,4.0,2.0,1.0,0.0,3.7,1.1,Liverpool,Premier_League
+Joe Gomez,DF,27-225,9,519.0,0.0,0.0,1.0,0.0,0.3,0.1,Liverpool,Premier_League
+Kostas Tsimikas,DF,28-236,8,254.0,0.0,0.0,0.0,0.0,0.1,0.5,Liverpool,Premier_League
+Jarell Quansah,DF,21-340,5,228.0,0.0,0.0,1.0,0.0,0.0,0.0,Liverpool,Premier_League
+Conor Bradley,DF,21-178,7,236.0,0.0,0.0,1.0,0.0,0.4,0.0,Liverpool,Premier_League
+Wataru Endo,MF,31-329,8,61.0,0.0,0.0,0.0,0.0,0.0,0.0,Liverpool,Premier_League
+Harvey Elliott,"MF,FW",21-274,6,43.0,0.0,0.0,0.0,0.0,0.0,0.1,Liverpool,Premier_League
+Federico Chiesa,FW,27-070,1,19.0,0.0,0.0,0.0,0.0,0.2,0.0,Liverpool,Premier_League
+Vitezslav Jaros,GK,23-164,1,12.0,0.0,0.0,0.0,0.0,0.0,0.0,Liverpool,Premier_League
+Jayden Danns,FW,18-353,0,,,,,,,,Liverpool,Premier_League
+Harvey Davies,GK,21-122,0,,,,,,,,Liverpool,Premier_League
+James McConnell,MF,20-112,0,,,,,,,,Liverpool,Premier_League
+Tyler Morton,MF,22-064,0,,,,,,,,Liverpool,Premier_League
+Amara Nallo,DF,18-046,0,,,,,,,,Liverpool,Premier_League
+Trey Nyoni,MF,17-187,0,,,,,,,,Liverpool,Premier_League

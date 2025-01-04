@@ -6,7 +6,7 @@ def convert_csv2sql():
 
     dbfile = "database.db"  # db file name
     dbname = "Players"      # name of database used in querying
-    csv_dir = r"D:\Taiki\Desktop\CS_Projects\fantasy\teamDatabase" # currently a local directory
+    csv_dir = "teamDatabase"  # local directory next to the Python files
 
     conn = sqlite3.connect(dbfile)  
 
@@ -26,3 +26,6 @@ def convert_csv2sql():
                 print(f"!!!CURCIAL ERROR!!! Unable to add to database! Error code: {e}")
 
     conn.close()
+
+# Uncomment this to run file
+convert_csv2sql()

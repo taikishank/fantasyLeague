@@ -1,0 +1,35 @@
+Player,Pos,Age,MP,Min,Gls,Ast,CrdY,CrdR,xG,xAG,Club,League
+Federico Baschirotto,DF,28-106,18,1620.0,0.0,0.0,2.0,0.0,0.4,0.0,Lecce,Serie_A
+Wladimiro Falcone,GK,29-267,18,1620.0,0.0,0.0,1.0,0.0,0.0,0.0,Lecce,Serie_A
+Nikola Krstović,FW,24-274,18,1467.0,4.0,1.0,1.0,0.0,6.5,1.1,Lecce,Serie_A
+Patrick Dorgu,"FW,DF",20-070,17,1480.0,3.0,0.0,2.0,1.0,3.0,1.1,Lecce,Serie_A
+Kialonda,DF,27-099,15,1350.0,0.0,1.0,3.0,0.0,1.0,0.3,Lecce,Serie_A
+Ylber Ramadani,MF,28-267,16,1224.0,0.0,1.0,2.0,0.0,0.3,0.8,Lecce,Serie_A
+Antonino Gallo,DF,24-365,14,1169.0,0.0,2.0,1.0,1.0,0.1,2.0,Lecce,Serie_A
+Frederic Guilbert,DF,30-011,13,973.0,0.0,0.0,2.0,2.0,0.1,0.8,Lecce,Serie_A
+Hamza Rafia,MF,25-277,16,941.0,0.0,0.0,4.0,0.0,0.4,1.4,Lecce,Serie_A
+Lassana Coulibaly,MF,28-269,18,1124.0,0.0,0.0,2.0,0.0,0.1,0.4,Lecce,Serie_A
+Tete Morente,"FW,MF",28-031,14,772.0,2.0,0.0,1.0,0.0,1.4,0.2,Lecce,Serie_A
+Balthazar Pierret,MF,24-234,13,595.0,0.0,0.0,1.0,0.0,0.1,0.2,Lecce,Serie_A
+Santiago Pierotti,FW,23-276,17,777.0,1.0,1.0,2.0,0.0,1.6,0.8,Lecce,Serie_A
+Ante Rebić,"FW,MF",31-105,16,521.0,1.0,0.0,3.0,0.0,1.6,1.8,Lecce,Serie_A
+Lameck Banda,"FW,MF",23-341,10,500.0,0.0,1.0,1.0,0.0,0.7,0.9,Lecce,Serie_A
+Gaby Jean,DF,24-320,7,388.0,0.0,0.0,0.0,0.0,0.0,0.0,Lecce,Serie_A
+Remi Oudin,"MF,FW",28-047,11,299.0,0.0,0.0,1.0,0.0,0.1,0.6,Lecce,Serie_A
+Medon Berisha,MF,21-075,6,241.0,0.0,1.0,0.0,0.0,0.2,0.3,Lecce,Serie_A
+Valentin Gendrey,DF,24-197,2,180.0,0.0,0.0,0.0,0.0,0.2,0.1,Lecce,Serie_A
+Andy Pelmard,DF,24-298,3,129.0,0.0,0.0,1.0,0.0,0.0,0.0,Lecce,Serie_A
+Mohamed Kaba,MF,23-069,7,143.0,0.0,0.0,1.0,0.0,0.3,0.0,Lecce,Serie_A
+Nicola Sansone,"MF,FW",33-116,5,65.0,0.0,0.0,1.0,0.0,0.2,0.0,Lecce,Serie_A
+Þórir Jóhann Helgason,"MF,FW",24-098,2,36.0,0.0,0.0,0.0,0.0,0.0,0.0,Lecce,Serie_A
+Filip Marchwiński,MF,22-360,1,15.0,0.0,0.0,0.0,0.0,0.0,0.0,Lecce,Serie_A
+Kevin Bonifazi,DF,28-230,1,7.0,0.0,0.0,0.0,0.0,0.0,0.0,Lecce,Serie_A
+Vernon Addo,MF,,0,,,,,,,,Lecce,Serie_A
+Alexandru Borbei,GK,21-191,0,,,,,,,,Lecce,Serie_A
+Rareș-Cătălin Burnete,FW,20-339,0,,,,,,,,Lecce,Serie_A
+Dario Daka,FW,20-346,0,,,,,,,,Lecce,Serie_A
+Sebastian Esposito,DF,19-258,0,,,,,,,,Lecce,Serie_A
+Christian Früchtl,GK,24-342,0,,,,,,,,Lecce,Serie_A
+Luis Hasa,MF,20-364,0,,,,,,,,Lecce,Serie_A
+Ed McJannet,MF,20-345,0,,,,,,,,Lecce,Serie_A
+Jasper Samooja,GK,21-167,0,,,,,,,,Lecce,Serie_A
