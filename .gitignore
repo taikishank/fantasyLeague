@@ -1,0 +1,3 @@
+.env
+# *.db We can add this back later when all the data is stored in the cloud
+__pycache__/

@@ -4,6 +4,7 @@ import pandas as pd
 from io import StringIO
 import time
 import os
+from pathlib import Path
 
 #   dataset() function
 #   no param
@@ -12,8 +13,11 @@ import os
 #   csv files used in SQL database for easy querying
 
 def dataset():
-
-#   use BeautifulSoup to extract the main Big-5 table with all teams from top 5 leagues
+    # Define base directory for data storage
+    base_dir = Path(__file__).parent.parent.parent
+    team_database_dir = base_dir / "teamDatabase"
+    
+    #   use BeautifulSoup to extract the main Big-5 table with all teams from top 5 leagues
 
     url = "https://fbref.com/en/comps/Big5/Big-5-European-Leagues-Stats"
     data = requests.get(url)
@@ -25,10 +29,10 @@ def dataset():
     squad_links = [l for l in links if '/squads/' in l]
     team_urls = [f"https://fbref.com{l}" for l in squad_links]
 
-#   iterates through each team url and extracts the team name and leauge
-#   extracts respective data table and converts to csv 
-#   csv file directory dependent upon the league
-#   ex  Barcelona is in La_Liga, Tottenham is in Premier_League, etc...
+    #   iterates through each team url and extracts the team name and leauge
+    #   extracts respective data table and converts to csv 
+    #   csv file directory dependent upon the league
+    #   ex  Barcelona is in La_Liga, Tottenham is in Premier_League, etc...
 
     for link in team_urls:
         team_name = link.split("/")[-1].replace("Stats", "").replace("-", " ")
@@ -55,19 +59,15 @@ def dataset():
         league = soup.find_all('a', href=lambda href: href and '/en/comps/' in href)[1]
         league = league.text.replace(' ', '_')
         player_data['League'] = league
-        folder_path = "teamDatabase"
+        folder_path = team_database_dir
+        league_path = folder_path / league
+        league_path.mkdir(parents=True, exist_ok=True)
         
-        # Create the league directory if it doesn't exist
-        league_path = os.path.join(folder_path, league)
-        os.makedirs(league_path, exist_ok=True)  # This will create both teamDatabase and the league subdirectory
-        
-        # Now create the file path and save the CSV
-        file_path = os.path.join(folder_path, league, team_name.replace(' ', "_") + '.csv')
+        file_path = league_path / f"{team_name.replace(' ', '_')}.csv"
         player_data.to_csv(file_path, index=False)
-
-        print(team_name + " successfully uploaded as csv to " + league)
+        
+        print(f"{team_name} successfully uploaded as csv to {league}")
         time.sleep(10)   # sleep so fbref gods dont ban
 
-
-# Uncomment this to generate the datafiles
-dataset()
+if __name__ == "__main__":
+    dataset()
