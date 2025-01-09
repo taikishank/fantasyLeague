@@ -1,9 +1,14 @@
 CREATE TABLE Leagues (
     league_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
+    code TEXT NOT NULL,
+    emblem TEXT,
     country TEXT,
+    country_code TEXT,
+    country_flag TEXT,
     number_of_weeks INTEGER
 );
+
 
 CREATE TABLE Seasons (
     season_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -30,7 +35,7 @@ CREATE TABLE Teams (
     FOREIGN KEY (league_id) REFERENCES Leagues (league_id)
 );
 
-CREATE TABLE Players (
+CREATE TABLE PlayersMetadata (
     player_id INTEGER PRIMARY KEY AUTOINCREMENT,
     team_id INTEGER NOT NULL,
     first_name TEXT NOT NULL,
