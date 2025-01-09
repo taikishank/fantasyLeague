@@ -9,7 +9,6 @@ CREATE TABLE Leagues (
     number_of_weeks INTEGER
 );
 
-
 CREATE TABLE Seasons (
     season_id INTEGER PRIMARY KEY AUTOINCREMENT,
     league_id INTEGER NOT NULL,
