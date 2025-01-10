@@ -1,19 +1,19 @@
 import os
-import json
 import requests
 import sqlite3
-from dotenv import load_dotenv
-import pprint as pp
 import pandas as pd
+from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
 
+# Leagues to filter
 leagues = {'SA', 'PL', 'FL1', 'PD', 'BL1'}
 
-def fetch_competitions():
+
+def fetch_all_data():
     """
-    Fetch competition data for leagues specified in the leagues set.
+    Fetch all competition data from the API.
     """
     api_key = os.getenv('FOOTBALL_DATA_API_KEY')
     if not api_key:
@@ -25,73 +25,122 @@ def fetch_competitions():
     try:
         response = requests.get(url, headers=headers)
         response.raise_for_status()
-        data = response.json()
-        
-        # Create a filtered dictionary mapping codes to league names and emblems
-        competitions_dict = {}
-        for competition in data.get('competitions', []):
-            code = competition['code']
-            if code in leagues:  # Only include leagues that are in our set
-                name = competition['name']
-                emblem = competition.get('emblem', None)
-
-                area = competition.get('area', None)
-                country_name = area.get('name', None)
-                country_code = area.get('code', None)
-                country_flag = area.get('flag', None)
-                current_season = competition.get('currentSeason')
-
-                start_date = current_season.get('startDate')
-                end_date = current_season.get('endDate')
-                num_weeks = pd.to_datetime(end_date) - pd.to_datetime(start_date)
-
-
-                competitions_dict[code] = {'name': name, 
-                                           'emblem': emblem, 
-                                           'country_name' : country_name, 
-                                           'country_code' : country_code, 
-                                           'country_flag' : country_flag,
-                                           'start_date' : start_date,
-                                           'end_date' : end_date,
-                                           'num_weeks' : num_weeks}
-
-        # Save competitions to the database
-        store_leagues_in_db(competitions_dict)
-        
-        return competitions_dict
-
+        return response.json().get('competitions', [])
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {e}")
-        return {}
+        return []
+
+
+def filter_league_data(competitions):
+    """
+    Filter competition data for specified leagues and transform into usable format.
+    """
+    competitions_dict = {}
+
+    for competition in competitions:
+        code = competition.get('code')
+        if code in leagues:
+            name = competition.get('name')
+            emblem = competition.get('emblem')
+            area = competition.get('area', {})
+            country_name = area.get('name')
+            country_code = area.get('code')
+            country_flag = area.get('flag')
+            current_season = competition.get('currentSeason', {})
+            start_date = current_season.get('startDate')
+            end_date = current_season.get('endDate')
+            num_weeks = pd.to_datetime(end_date) - pd.to_datetime(start_date) if start_date and end_date else None
+
+            competitions_dict[code] = {
+                'name': name,
+                'emblem': emblem,
+                'country_name': country_name,
+                'country_code': country_code,
+                'country_flag': country_flag,
+                'num_weeks': num_weeks.days // 7 if num_weeks else None,
+                'seasons': competition.get('seasons', [
+                    {
+                        'startDate' : start_date,
+                        'endDate' : end_date
+                    }
+                ])
+            }
+
+    return competitions_dict
+
 
 def store_leagues_in_db(competitions_dict):
     """
-    Store league and area data into the database.
-    Args:
-        competitions_dict (dict): Filtered competition data with league details.
+    Store league data in the Leagues table.
+    """
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+
+    league_ids = {}
+    for code, league_data in competitions_dict.items():
+        cursor.execute("""
+            INSERT INTO Leagues (name, code, emblem, country, country_code, country_flag, num_weeks)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        """, (
+            league_data['name'],
+            code,
+            league_data['emblem'],
+            league_data['country_name'],
+            league_data['country_code'],
+            league_data['country_flag'],
+            league_data['num_weeks']
+        ))
+        league_ids[code] = cursor.lastrowid  # Store the auto-generated league_id
+
+    conn.commit()
+    conn.close()
+
+    return league_ids
+
+
+def store_seasons_in_db(league_ids, competitions_dict):
+    """
+    Store season data for all leagues in the Seasons table.
     """
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
 
     for code, league_data in competitions_dict.items():
-        # Insert data into the Leagues table
-        cursor.execute("""
-            INSERT INTO Leagues (name, code, emblem, country, country_code, country_flag, num_weeks)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
-        """, (
-            league_data['name'],          # League name
-            code,                         # League code
-            league_data['emblem'],        # League emblem
-            league_data['country_name'],  # Country name
-            league_data['country_code'],  # Country code
-            league_data['country_flag'],  # Country flag
-            league_data['num_weeks']      # Number of weeks in season
-        ))
-    
+        league_id = league_ids.get(code)
+        if league_id:
+            for season in league_data.get('seasons', []):
+                year = f"{pd.to_datetime(season['startDate']).year}-{pd.to_datetime(season['endDate']).year}"
+                cursor.execute("""
+                    INSERT INTO Seasons (league_id, year, start_date, end_date)
+                    VALUES (?, ?, ?, ?)
+                """, (
+                    league_id,
+                    year,
+                    season.get('startDate'),
+                    season.get('endDate')
+                ))
+
     conn.commit()
-    conn.close() 
+    conn.close()
+
+
+def fetch_and_store_leagues_and_seasons():
+    """
+    Main function to fetch competition data, process it, and store it into the database.
+    """
+    # Step 1: Fetch data
+    competitions = fetch_all_data()
+
+    # Step 2: Filter data for specified leagues
+    competitions_dict = filter_league_data(competitions)
+    print("Filtered Competitions Data:", competitions_dict)
+
+    # Step 3: Store leagues and retrieve their IDs
+    league_ids = store_leagues_in_db(competitions_dict)
+
+    # Step 4: Store seasons linked to leagues
+    store_seasons_in_db(league_ids, competitions_dict)
 
 
 if __name__ == "__main__":
-    competitions_dict = fetch_competitions()
-    pp.pprint(competitions_dict)
+    fetch_and_store_leagues_and_seasons()
