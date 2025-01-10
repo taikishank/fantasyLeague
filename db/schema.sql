@@ -6,7 +6,7 @@ CREATE TABLE Leagues (
     country TEXT,
     country_code TEXT,
     country_flag TEXT,
-    number_of_weeks INTEGER
+    num_weeks INTEGER
 );
 
 CREATE TABLE Seasons (

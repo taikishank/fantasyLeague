@@ -4,6 +4,7 @@ import requests
 import sqlite3
 from dotenv import load_dotenv
 import pprint as pp
+import pandas as pd
 
 # Load environment variables from .env file
 load_dotenv()
@@ -38,8 +39,21 @@ def fetch_competitions():
                 country_name = area.get('name', None)
                 country_code = area.get('code', None)
                 country_flag = area.get('flag', None)
+                current_season = competition.get('currentSeason')
 
-                competitions_dict[code] = {'name': name, 'emblem': emblem, 'country_name' : country_name, 'country_code' : country_code, 'country_flag' : country_flag}
+                start_date = current_season.get('startDate')
+                end_date = current_season.get('endDate')
+                num_weeks = pd.to_datetime(end_date) - pd.to_datetime(start_date)
+
+
+                competitions_dict[code] = {'name': name, 
+                                           'emblem': emblem, 
+                                           'country_name' : country_name, 
+                                           'country_code' : country_code, 
+                                           'country_flag' : country_flag,
+                                           'start_date' : start_date,
+                                           'end_date' : end_date,
+                                           'num_weeks' : num_weeks}
 
         # Save competitions to the database
         store_leagues_in_db(competitions_dict)
@@ -62,7 +76,7 @@ def store_leagues_in_db(competitions_dict):
     for code, league_data in competitions_dict.items():
         # Insert data into the Leagues table
         cursor.execute("""
-            INSERT INTO Leagues (name, code, emblem, country, country_code, country_flag, number_of_weeks)
+            INSERT INTO Leagues (name, code, emblem, country, country_code, country_flag, num_weeks)
             VALUES (?, ?, ?, ?, ?, ?, ?)
         """, (
             league_data['name'],          # League name
@@ -71,11 +85,11 @@ def store_leagues_in_db(competitions_dict):
             league_data['country_name'],  # Country name
             league_data['country_code'],  # Country code
             league_data['country_flag'],  # Country flag
-            38                            # Default number of weeks
+            league_data['num_weeks']      # Number of weeks in season
         ))
     
     conn.commit()
-    conn.close()
+    conn.close() 
 
 
 if __name__ == "__main__":
